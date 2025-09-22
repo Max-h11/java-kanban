@@ -15,9 +15,6 @@ public class TaskManager {
         nextId = 1;
     }
 
-    private int generateId() {
-        return nextId++;
-    }
 
 
     public List<Task> getAllTasks() {
@@ -182,4 +179,9 @@ public class TaskManager {
             epic.setStatus(TaskStatus.IN_PROGRESS);
         }
     }
+
+    private int generateId() {
+        return nextId++;
+    }
+
 }
