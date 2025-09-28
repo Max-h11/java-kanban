@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Epic extends Task {
-    private ArrayList<Integer> idListOfSubtask;
+    private final ArrayList<Integer> idListOfSubtask;
 
     public Epic(String name, String description) {
         super(name, description);
@@ -13,7 +14,13 @@ public class Epic extends Task {
         this.idListOfSubtask = new ArrayList<>();
     }
 
-    public ArrayList<Integer> getIdListOfSubtask() {
+    // КОНСТРУКТОР-КОПИРОВЩИК
+    public Epic(Epic other) {
+        super(other);
+        this.idListOfSubtask = new ArrayList<>(other.idListOfSubtask);
+    }
+
+    public List<Integer> getIdListOfSubtask() {
         return idListOfSubtask;
     }
 
